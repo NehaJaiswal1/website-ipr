@@ -14,11 +14,13 @@
     "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/material": "^5.15.11",
     "@mui/styled-engine-sc": "^6.0.0-alpha.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router": "^6.22.2",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
