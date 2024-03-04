@@ -7,7 +7,12 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #fbf5ff;
+    /* background-color: #5B6D92; */
+    background: rgb(31,22,42);
+    background: linear-gradient(90deg,
+     rgba(31,22,42,1) 5%, rgb(86, 50, 100)
+      100%, rgba(28,16,42,0.8971428571428571)
+       100%);
     overflow-x: hidden;
     padding-top: 20px;
     transition: 0.5s;
@@ -19,8 +24,11 @@
     padding: 15px 8px 6px 16px;
     text-decoration: none;
     font-size: 15px;
-    color: #29085f;
+    
+    /* color: #5B6D92; */
+    /* color: #efe8f3; */
     /* display: block; */
+    color: #F8D673;
     margin-top: 5px;
     text-align: left;
     /* margin-left: 15px; */
@@ -33,23 +41,35 @@
   }
 
   .sidenav div:hover {
-    color: #29085f;
-    background-color: #e8e4f0;
+    /* color: #29085f; */
+    color: #fbf5ff;
+    /* background-color: #e8e4f0; */
     border-radius: 10px;
     
   }
-/*   
-  .sidebar-item a {
-    margin-left: 10px; /* Adjust this value as needed */
-   */
+
+  .profile-name img{
+   width: 100px;
+   height: 100px;
+   border-radius: 100%;
+   border-color: #F8D673;
+   border-width: 4px;
+   border-style: solid;
+  }
+  
+  .sidebar-item a:hover {
+    color: #f7f5fc !important;
+  }
+   
 /*   
   .sidenav div div{
     display: flex;
   } */
 
   .sidenav a:hover {
-    color: #29085f;
-    background-color: #17161a;
+    /* color: #29085f; */
+    color: #fbf5ff;
+    /* background-color: #17161a; */
     border-radius: 10px;
     transition: 0.3s;
    
@@ -59,7 +79,8 @@
     padding: 10px;
     text-align: center;
     font-size: 20px;
-    color: #320f6b;
+    /* color: #f7f5fc; */
+    color: #F8D673;
     /* display: block; */
     border-radius: 20px;
     
@@ -87,7 +108,9 @@
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #fbf5ff;
+    /* background-color: #fbf5ff; */
+    /* background: rgb(31,22,42);
+    background: linear-gradient(90deg, rgba(31,22,42,1) 5%, rgba(116,66,135,1) 100%, rgba(28,16,42,0.8971428571428571) 100%); */
     overflow-x: hidden;
     padding-top: 20px;
     transition: 0.5s;

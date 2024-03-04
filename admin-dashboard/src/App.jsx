@@ -1,6 +1,7 @@
 
 import React from 'react'
 import AdminDasboard from './Components/AdminDasboard'
+import './App.css';
 
 function App() {
   return (

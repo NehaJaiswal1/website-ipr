@@ -18,6 +18,7 @@ import {
   faTeamspeak,
 } from "@fortawesome/free-brands-svg-icons";
 import "./Sidebar.css";
+import ad from '../../assets/admin.jpeg';
 import DashboardContent from "../DashboardContent/DashboardContent";
 import Event from "../Event/Event";
 import Schedule from "../Schedule/Schedule";
@@ -25,7 +26,7 @@ import Transaction from "../Transaction/Transaction";
 import TestimonialContent from "../Testimonial/TestimonialContent";
 import ContactQuery from "../ContactQuery/ContactQueryContent"
 import { useNavigate} from 'react-router';
-import { faCalendarAlt, faCalendarCheck, faListAlt, faQuestionCircle, faSignOutAlt, faTasksAlt, faThLarge, faThList } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarAlt, faCalendarCheck, faListAlt, faQuestionCircle, faSignOutAlt, faTasksAlt, faTh, faThLarge, faThList } from "@fortawesome/free-solid-svg-icons";
 
 function Sidebar() {
   // const navigate = useNavigate();
@@ -104,11 +105,11 @@ function Sidebar() {
     <>
       <div className="sidenav">
         <div className="profile-name">
-          Hello, Admin
+        <img src={ ad } alt=""/>
         </div>
         <div className="sidebar-item" 
         onClick={handleDashboardClick}>
-          <FontAwesomeIcon icon={faListAlt} 
+          <FontAwesomeIcon icon={faThLarge} 
           style={{ marginTop: "20px" }} />
           <a href="#dashboard">
             Dashboard</a>

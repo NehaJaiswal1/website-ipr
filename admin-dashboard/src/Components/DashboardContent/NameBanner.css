@@ -1,0 +1,24 @@
+
+
+.card-div{
+    height: 80px;
+    width: 850px;
+    /* background-color: #5B6D92 !important; */
+    background: rgb(31,22,42);
+    background: linear-gradient(90deg,
+     rgba(31,22,42,1) 5%, rgba(116,66,135,1)
+      100%, rgba(28,16,42,0.8971428571428571)
+       100%);
+    /* margin-left: 10px; */
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px  !important;
+    color: #f1f1ef !important;
+
+}
+
+h2{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:500;
+}
+
