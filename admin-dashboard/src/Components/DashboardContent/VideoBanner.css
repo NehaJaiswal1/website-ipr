@@ -11,3 +11,12 @@
        margin-top: 10px;
        margin-left: 10px;
 }
+
+.overlay {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    width: 450px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency by changing the last value (0.5) */
+  }

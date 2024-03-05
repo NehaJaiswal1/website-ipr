@@ -38,6 +38,7 @@ function Sidebar() {
     setScheduleContent(false);
     setContactQueryContent(false);
     setTransactionContent(false);
+    setTestimonialContent(false)
   };
 
   const [eventContent, setEventContent] = useState(false);
@@ -47,7 +48,7 @@ function Sidebar() {
     setShowDashboardContent(false);
     setScheduleContent(false);
     setContactQueryContent(false);
-
+    setTestimonialContent(false)
     setTransactionContent(false);
   };
 
@@ -70,6 +71,7 @@ function Sidebar() {
     setShowDashboardContent(false);
     setScheduleContent(false);
     setContactQueryContent(false);
+    setTestimonialContent(false)
   };
 
 

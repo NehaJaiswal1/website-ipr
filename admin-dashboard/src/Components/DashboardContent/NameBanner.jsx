@@ -8,7 +8,9 @@ function NameBanner() {
   return (
     <div>
       <Card className='card-div'>
-        <h2>Hello, Admin!</h2>
+        <h3 className='name-h2'>
+          Hello, Admin!
+        </h3>
         
       </Card>
       
