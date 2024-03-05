@@ -17,3 +17,28 @@ h3{
     text-align: center;
     /* font-size: 30px; */
 }
+
+
+@media screen and (max-width: 400px) {
+
+    .sc-card{
+        height: 400px;
+        width: 300px !important;
+        margin-left: 0;
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .sc-card{
+        height: 400px;
+        width: 600px ;
+        margin-left: 0;
+        
+    }
+    
+    
+}

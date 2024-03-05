@@ -20,3 +20,33 @@
     height: 200px;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency by changing the last value (0.5) */
   }
+
+
+  @media screen and (max-width: 768px) {
+
+    .banner-div{
+      width: 600px;
+      height: 200px;
+  }
+  .overlay {
+    width: 300px;
+    height: 200px;
+  }
+    
+
+}
+
+@media screen and (max-width: 400px) {
+
+  .banner-div{
+    width: 300px;
+    height: 200px;
+    margin-left: 0;
+}
+.overlay {
+  width: 300px;
+  height: 200px;
+}
+    
+
+}

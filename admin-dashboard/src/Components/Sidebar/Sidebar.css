@@ -8,11 +8,8 @@
   top: 0;
   left: 0;
   /* background-color: #5B6D92; */
-  background: rgb(31,22,42);
-  background: linear-gradient(90deg,
-   rgba(31,22,42,1) 5%, rgb(86, 50, 100)
-    100%, rgba(28,16,42,0.8971428571428571)
-     100%);
+  background: rgb(100,73,134);
+  background: linear-gradient(90deg, rgba(100,73,134,1) 5%, rgba(195,131,219,0.6026785714285714) 100%, rgba(175,117,232,0.8971428571428571) 100%);
   overflow-x: hidden;
   padding-top: 20px;
   transition: 0.5s;
@@ -28,7 +25,7 @@
   /* color: #5B6D92; */
   /* color: #efe8f3; */
   /* display: block; */
-  color: #F8D673;
+  color: white;
   margin-top: 5px;
   text-align: left;
   /* margin-left: 15px; */
@@ -42,7 +39,7 @@
 
 .sidenav div:hover {
   /* color: #29085f; */
-  color: #fbf5ff;
+  color: #F8D673;
   /* background-color: #e8e4f0; */
   border-radius: 10px;
   
@@ -52,13 +49,13 @@
  width: 100px;
  height: 100px;
  border-radius: 100%;
- border-color: #F8D673;
- border-width: 4px;
+ border-color: white;
+ border-width: 2px;
  border-style: solid;
 }
 
 .sidebar-item a:hover {
-  color: #f7f5fc !important;
+  color: #F8D673 !important;
 }
  
 /*   
@@ -80,7 +77,7 @@
   text-align: center;
   font-size: 20px;
   /* color: #f7f5fc; */
-  color: #F8D673;
+  color: white;
   /* display: block; */
   border-radius: 20px;
   
@@ -93,9 +90,28 @@
   padding: 0px 10px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+@media screen and (max-width: 300px) {
+  /* .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;} */
+  
+.sidenav {
+  height: 300px;
+  width: 100px;
+  
+  /* background-color: #5B6D92; */
+
+}
+
+  .profile-name img{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    
+   }
+   
 }
 
 
@@ -118,47 +134,20 @@
   border-radius: 12px;
 }
 
-@media screen and (max-width: 768px) {
+
+
+@media screen and (max-width: 600px) {
   .sidenav {
-    width: 100%;
+    width: 400px;
     height: auto;
     position: relative;
   }
 
   .sidebar-right {
-    width: 100%;
-    position: relative;
-    margin-top: 20px; /* Add some space between the sidenav and main content */
-  }
-
-  .profile-name img {
-    width: 80px; /* Adjust the image size for smaller screens */
-    height: 80px;
-  }
-  
-  .sidenav div {
-    padding: 10px;
-    text-align: center;
-    font-size: 16px; /* Adjust the font size for smaller screens */
-  }
-  
-  .sidenav a {
-    font-size: 14px; /* Adjust the font size for smaller screens */
-    padding: 10px; /* Adjust the padding for smaller screens */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .sidenav {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  .sidebar-right {
-    width: 100%;
+    width: 400px;
     position: relative;
     margin-top: 20px;
+    margin-right: 5px;
   }
 
   .profile-name img {
@@ -178,22 +167,24 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
   .sidenav {
-    width: 100%;
+    width: 200px;
     height: auto;
     position: relative;
   }
 
   .sidebar-right {
-    width: 100%;
+    width: 200px;
     position: relative;
     margin-top: 20px;
+    margin-right: 5px;
   }
 
   .profile-name img {
     width: 60px;
     height: 60px;
+    
   }
 
   .sidenav div {

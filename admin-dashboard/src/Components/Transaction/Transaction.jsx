@@ -39,6 +39,11 @@ function Transaction() {
         padding: "10px",
       }}
     >
+      {/* .schedule-heading{
+    text-align: left;
+    margin-left: 50px; */}
+  
+      <h2 style={{marginLeft:'10px'}}>Transaction Detail</h2>
       {/* <FormControl style={{ width: '500px', height: '500px', padding: '10px' }}>
         <Select
           label="Email"
@@ -150,7 +155,7 @@ function Transaction() {
                 <TableCell
                   tyle={{ textAlign: "left", borderBottom: "1px solid #ccc" }}
                 >
-                  {data.price}
+                  {data.modeOfPayment}
                 </TableCell>
                 <TableCell
                   tyle={{ textAlign: "left", borderBottom: "1px solid #ccc" }}
@@ -160,7 +165,7 @@ function Transaction() {
                 <TableCell
                   tyle={{ textAlign: "left", borderBottom: "1px solid #ccc" }}
                 >
-                  {data.modeOfPayment}
+                  {data.price}
                 </TableCell>
                
 

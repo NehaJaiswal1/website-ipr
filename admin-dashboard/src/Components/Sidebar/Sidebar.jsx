@@ -1,18 +1,9 @@
 
 
 import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import { Button, Card } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faAccessibleIcon,
-  faAccusoft,
-  faAdn,
-  faAirbnb,
   faAlgolia,
-  faAmilia,
-  faAngular,
-  faAtlassian,
   faCcDiscover,
   faCloudsmith,
   faTeamspeak,

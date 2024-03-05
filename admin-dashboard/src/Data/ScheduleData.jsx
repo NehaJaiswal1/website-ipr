@@ -2,31 +2,34 @@
 
 
 
-export const ticketData = [
+export const scheduleData = [
 
     {
       _id:1,
-      img: <FontAwesomeIcon icon={faTicketAlt} />,
-      ticketData: "Diamond",
-      price: "$200",
-      location: 'Dubai'
+      day: 'Monday',
+      date: "10-03-2024",
+      time: "10:00 - 11:00",
+      title: "conference gorilla",
+      location: 'virtual',
     },
       
         
     {
       _id:2,
-    img:<FontAwesomeIcon icon={faTicketAlt} />,
-    ticketData: "Silver",
-    price: "$500",
-    location: 'Dubai'
+      day: 'Monday',
+      date: "10-03-2024",
+      time: "2:00 - 3:00",
+      title: "Meeting",
+      location: 'virtual',
     
     },
       {
         _id:3,
-        img:<FontAwesomeIcon icon={faTicketAlt} />,
-        ticketData: "Gold",
-        price: "$500",
-        location: 'Dubai'
+        day: 'Thursday',
+        date: "10-03-2024",
+      time: "5:00pm - 6:00pm",
+      title: "Conference",
+      location: 'virtual',
   }, 
   ]
   

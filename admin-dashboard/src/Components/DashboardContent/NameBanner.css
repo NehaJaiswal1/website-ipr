@@ -23,3 +23,22 @@
     /* margin-bottom: 10px !important; */
 }
 
+@media screen and (max-width: 300px) {
+    .card-div{
+        height: 20px;
+        width: 150px;
+    }
+    
+   
+}
+
+@media screen and (max-width: 600px) {
+    .card-div{
+        height: 20px;
+        width: 300px;
+    }
+    
+    
+}
+
+
