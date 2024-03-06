@@ -8,7 +8,7 @@ export const scheduleData = [
       _id:1,
       day: 'Monday',
       date: "10-03-2024",
-      time: "10:00 - 11:00",
+      time: "10:00am - 11:00am",
       title: "conference gorilla",
       location: 'virtual',
     },
@@ -18,7 +18,7 @@ export const scheduleData = [
       _id:2,
       day: 'Monday',
       date: "10-03-2024",
-      time: "2:00 - 3:00",
+      time: "2:00pm - 3:00pm",
       title: "Meeting",
       location: 'virtual',
     

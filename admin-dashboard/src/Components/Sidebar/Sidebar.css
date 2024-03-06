@@ -7,9 +7,9 @@
   z-index: 1;
   top: 0;
   left: 0;
-  /* background-color: #5B6D92; */
-  background: rgb(100,73,134);
-  background: linear-gradient(90deg, rgba(100,73,134,1) 5%, rgba(195,131,219,0.6026785714285714) 100%, rgba(175,117,232,0.8971428571428571) 100%);
+  background-color: #5B6D92;
+  /* background: rgb(100,73,134);
+  background: linear-gradient(90deg, rgba(100,73,134,1) 5%, rgba(195,131,219,0.6026785714285714) 100%, rgba(175,117,232,0.8971428571428571) 100%); */
   overflow-x: hidden;
   padding-top: 20px;
   transition: 0.5s;
@@ -90,31 +90,6 @@
   padding: 0px 10px;
 }
 
-@media screen and (max-width: 300px) {
-  /* .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;} */
-  
-.sidenav {
-  height: 300px;
-  width: 100px;
-  
-  /* background-color: #5B6D92; */
-
-}
-
-  .profile-name img{
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    border-color: white;
-    border-width: 2px;
-    border-style: solid;
-    
-   }
-   
-}
-
-
 /*---------- Right Navbar --------------- */
 
 .sidebar-right {
@@ -124,6 +99,7 @@
   z-index: 1;
   top: 0;
   right: 0;
+  
   /* background-color: #fbf5ff; */
   /* background: rgb(31,22,42);
   background: linear-gradient(90deg, rgba(31,22,42,1) 5%, rgba(116,66,135,1) 100%, rgba(28,16,42,0.8971428571428571) 100%); */
@@ -136,18 +112,20 @@
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width:481px) and (max-width: 768px) {
   .sidenav {
-    width: 400px;
+    width: 600px;
     height: auto;
     position: relative;
   }
 
   .sidebar-right {
-    width: 400px;
+    width: 600px;
     position: relative;
     margin-top: 20px;
     margin-right: 5px;
+    display: flex;
+    flex-direction: column;
   }
 
   .profile-name img {
@@ -167,15 +145,17 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 480px) {
   .sidenav {
-    width: 200px;
+    width: 400px;
     height: auto;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .sidebar-right {
-    width: 200px;
+    width: 400px;
     position: relative;
     margin-top: 20px;
     margin-right: 5px;
@@ -198,3 +178,21 @@
     padding: 8px;
   }
 }
+
+
+@media screen and (min-width:769px) and (max-width: 1200px) {
+  .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    
+  }
+
+  .sidebar-right {
+    height: 100%;
+    width: 600px;
+    position: fixed;
+  }
+
+}
+

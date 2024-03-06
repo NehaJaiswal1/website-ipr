@@ -108,13 +108,13 @@ function Sidebar() {
             Dashboard</a>
         </div>
 
-        <div className="sidebar-item" onClick={handleEventClick}>
+        {/* <div className="sidebar-item" onClick={handleEventClick}>
           <FontAwesomeIcon
             icon={faCalendarCheck}
             style={{ marginTop: "20px" }}
           />
           <a href="#dashboard">Event</a>
-        </div>
+        </div> */}
         <div className="sidebar-item" onClick={handleScheduleClick}>
           <FontAwesomeIcon icon={faCalendarAlt} style={{ marginTop: "20px" }} />
           <a href="#dashboard">Schedule</a>
@@ -123,10 +123,10 @@ function Sidebar() {
           <FontAwesomeIcon icon={faCcDiscover} style={{ marginTop: "20px" }} />
           <a href="#dashboard">Transaction</a>
         </div>
-        <div className="sidebar-item" onClick={handleTestimonialClick}>
+        {/* <div className="sidebar-item" onClick={handleTestimonialClick}>
           <FontAwesomeIcon icon={faAlgolia} style={{ marginTop: "20px" }} />
           <a href="#dashboard">Testimonial</a>
-        </div>
+        </div> */}
         <div className="sidebar-item" onClick={handleContactQueryClick}>
           <FontAwesomeIcon icon={faQuestionCircle} style={{ marginTop: "20px" }} />
           <a href="#dashboard">Query Support</a>
