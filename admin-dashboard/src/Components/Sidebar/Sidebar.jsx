@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,13 +13,20 @@ import Event from "../Event/Event";
 import Schedule from "../Schedule/Schedule";
 import Transaction from "../Transaction/Transaction";
 import TestimonialContent from "../Testimonial/TestimonialContent";
-import ContactQuery from "../ContactQuery/ContactQueryContent"
-import { useNavigate} from 'react-router';
+import ContactQuery from "../ContactQuery/ContactQueryContent";
+import Sponsor from "../AddSponsor/Sponsor";
+import { useNavigate} from 'react-router';  
 import { faCalendarAlt, faCalendarCheck, faListAlt, faQuestionCircle, faSignOutAlt, faTasksAlt, faTh, faThLarge, faThList } from "@fortawesome/free-solid-svg-icons";
 
 function Sidebar() {
   // const navigate = useNavigate();
   const [showDashboardContent, setShowDashboardContent] = useState(true);
+  const [eventContent, setEventContent] = useState(false);
+  const [scheduleContent, setScheduleContent] = useState(false);
+  const [transactionContent, setTransactionContent] = useState(false);
+  const [testimonialContent, setTestimonialContent] = useState(false);
+  const [contactQueryContent, setContactQueryContent] = useState(false);
+  const [showSponsor, setShowSponsor] = useState(false); // New state for AddSponsor
 
   const handleDashboardClick = () => {
     setShowDashboardContent(true);
@@ -29,21 +34,19 @@ function Sidebar() {
     setScheduleContent(false);
     setContactQueryContent(false);
     setTransactionContent(false);
-    setTestimonialContent(false)
+    setTestimonialContent(false);
+    setShowSponsor(false);
   };
-
-  const [eventContent, setEventContent] = useState(false);
 
   const handleEventClick = () => {
     setEventContent(true);
     setShowDashboardContent(false);
     setScheduleContent(false);
     setContactQueryContent(false);
-    setTestimonialContent(false)
+    setTestimonialContent(false);
     setTransactionContent(false);
+    setShowSponsor(false);
   };
-
-  const [scheduleContent, setScheduleContent] = useState(false);
 
   const handleScheduleClick = () => {
     setScheduleContent(true);
@@ -51,10 +54,9 @@ function Sidebar() {
     setShowDashboardContent(false);
     setContactQueryContent(false);
     setTransactionContent(false);
-    setTestimonialContent(false)
+    setTestimonialContent(false);
+    setShowSponsor(false);
   };
-
-  const [transactionContent, setTransactionContent] = useState(false);
 
   const handleTransactionClick = () => {
     setTransactionContent(true);
@@ -62,11 +64,9 @@ function Sidebar() {
     setShowDashboardContent(false);
     setScheduleContent(false);
     setContactQueryContent(false);
-    setTestimonialContent(false)
+    setTestimonialContent(false);
+    setShowSponsor(false);
   };
-
-
-  const [testimonialContent, setTestimonialContent] = useState(false);
 
   const handleTestimonialClick = () => {
     setTestimonialContent(true);
@@ -75,9 +75,8 @@ function Sidebar() {
     setScheduleContent(false);
     setTransactionContent(false);
     setContactQueryContent(false);
-  }
-
-  const [contactQueryContent, setContactQueryContent] = useState(false);
+    setShowSponsor(false);
+  };
 
   const handleContactQueryClick = () => {
     setContactQueryContent(true);
@@ -86,35 +85,33 @@ function Sidebar() {
     setShowDashboardContent(false);
     setScheduleContent(false);
     setTransactionContent(false);
-  }
+    setShowSponsor(false);
+  };
 
-  const handleLogOut=()=>{
-    // navigate(`/`);
+  const handleLogOut = () => {
+    console.log("I'm sure you want to move to home");
+  };
 
-    console.log("Im sure you want to move to home ")
-  }
+  const handleSponsor = () => {
+    setShowSponsor(true); 
+    setContactQueryContent(false);
+    setTestimonialContent(false);
+    setEventContent(false);
+    setShowDashboardContent(false);
+    setScheduleContent(false);
+    setTransactionContent(false);
+  };
 
   return (
     <>
       <div className="sidenav">
         <div className="profile-name">
-        <img src={ ad } alt=""/>
+          <img src={ad} alt="" />
         </div>
-        <div className="sidebar-item" 
-        onClick={handleDashboardClick}>
-          <FontAwesomeIcon icon={faThLarge} 
-          style={{ marginTop: "20px" }} />
-          <a href="#dashboard">
-            Dashboard</a>
+        <div className="sidebar-item" onClick={handleDashboardClick}>
+          <FontAwesomeIcon icon={faThLarge} style={{ marginTop: "20px" }} />
+          <a href="#dashboard">Dashboard</a>
         </div>
-
-        {/* <div className="sidebar-item" onClick={handleEventClick}>
-          <FontAwesomeIcon
-            icon={faCalendarCheck}
-            style={{ marginTop: "20px" }}
-          />
-          <a href="#dashboard">Event</a>
-        </div> */}
         <div className="sidebar-item" onClick={handleScheduleClick}>
           <FontAwesomeIcon icon={faCalendarAlt} style={{ marginTop: "20px" }} />
           <a href="#dashboard">Schedule</a>
@@ -123,10 +120,14 @@ function Sidebar() {
           <FontAwesomeIcon icon={faCcDiscover} style={{ marginTop: "20px" }} />
           <a href="#dashboard">Transaction</a>
         </div>
-        {/* <div className="sidebar-item" onClick={handleTestimonialClick}>
-          <FontAwesomeIcon icon={faAlgolia} style={{ marginTop: "20px" }} />
+        <div className="sidebar-item" onClick={handleTestimonialClick}>
+          <FontAwesomeIcon icon={faCalendarCheck} style={{ marginTop: "20px" }} />
           <a href="#dashboard">Testimonial</a>
-        </div> */}
+        </div>
+        <div className="sidebar-item" onClick={handleSponsor}>
+          <FontAwesomeIcon icon={faThLarge} style={{ marginTop: "20px" }} />
+          <a href="#dashboard">Sponsor</a>
+        </div>
         <div className="sidebar-item" onClick={handleContactQueryClick}>
           <FontAwesomeIcon icon={faQuestionCircle} style={{ marginTop: "20px" }} />
           <a href="#dashboard">Query Support</a>
@@ -135,15 +136,16 @@ function Sidebar() {
           <FontAwesomeIcon icon={faSignOutAlt} style={{ marginTop: "20px" }} />
           <a href="#dashboard">LogOut</a>
         </div>
+       
       </div>
       <div className="sidebar-right">
         {showDashboardContent && <DashboardContent />}
-        {eventContent && <Event/>}
-        {scheduleContent && <Schedule/>}
-        {transactionContent && <Transaction/>}
-        {testimonialContent && 
-        <TestimonialContent/>}
-        {contactQueryContent && <ContactQuery/>}
+        {eventContent && <Event />}
+        {scheduleContent && <Schedule />}
+        {transactionContent && <Transaction />}
+        {testimonialContent && <TestimonialContent />}
+        {contactQueryContent && <ContactQuery />}
+        {showSponsor && <Sponsor />}
       </div>
     </>
   );
